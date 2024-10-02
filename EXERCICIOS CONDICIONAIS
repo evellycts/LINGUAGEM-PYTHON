@@ -1,0 +1,49 @@
+#exercicio 1 
+nome = input("Digite seu nome:\n")
+print("bom dia,",nome)
+
+#exercicio 2
+A = 10 
+B = 20 
+temp = A
+A = B
+B = temp
+print("Valor de A:", A)
+print("Valor de B:", B)
+
+#exercicio 3
+n1 = int(input("digite sua primeira nota:\n"))
+n2 = int(input("digite sua segunda nota:\n"))
+n3 = int(input("digite sua terceira nota:\n"))
+media = (n1+n2+n3)/3
+if media >= 6:
+  print("média:\n", media)
+  print("Aprovado")
+else:
+  print("média:\n", media)
+  print("Reprovado")
+
+#exercicio 4 
+idade = int(input("Digite sua idade:\n"))
+if idade>=5 and idade<=7:
+  print("categoria infantil A")
+if idade>=8 and idade<=10:
+ print("categoria infantil B")
+if idade>=11 and idade<=13:
+  print("categoria juvenil A")
+if idade>=14 and idade<=17:
+  print("categoria juvenil B")
+if idade>=18 :
+  print("categoria adulto")
+
+#exercicio 5
+indice = float(input("Digite o indice de poluição:\n"))
+if 0.25 < indice <= 0.3 :
+  print("indústrias do 1º grupo são intimadas a suspenderem suas atividades")
+elif 0.3 < indice <= 0.4:
+  print("industrias do 1º e 2º grupo são intimadas a suspenderem suas atividades")
+elif indice <= 0.5:
+  print("todos os 3 grupos devem ser notificados a paralisarem suas atividades")
+else:
+  print("O índice de poluição está dentro do limite")
+  
