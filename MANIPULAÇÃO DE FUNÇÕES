@@ -1,0 +1,92 @@
+# lista: dados de varios tipos de formas que podem ser alterados
+# vetor: dados de um unico tipo que podem ser alterados
+
+#exemplo 1 - resposta 1
+numeros = [
+[int(input("Digite a primeira idade:")),int(input("Digite a segunda idade:"))],
+[int(input("Digite a terceira idade:")),int(input("Digite a quarta idade:"))]
+]
+print(numeros)
+#resposta 2
+numeros2 = [
+  [0,0],
+  [0,0]
+]
+for i in range (2):
+  for j in range (2):
+    numeros2 [i] [j] = int(input("Digite um numero:"))
+print(numeros2)
+#resposta 3
+numeros3 = []
+for x in range (2):
+  linha = []
+  for y in range (2):
+    numero3 = int(input("Digite um numero:"))
+    linha.append(numero3)
+    numeros3.append(linha)
+print(numeros3)
+
+#exemplo 2 - com resposta 2 do exemplo 1
+numeros2 = [
+  [0,0],
+  [0,0]
+]
+for i in range (2):
+  for j in range (2):
+    numeros2 [i] [j] = int(input("Digite um numero:"))
+print(numeros2 [1])
+
+#exemplo 3 - utilizando resposta 2 do exemplo 1
+numeros2 = [
+  [0,0],
+  [0,0]
+]
+for i in range (2):
+  for j in range (2):
+    numeros2 [i] [j] = int(input("Digite um numero:"))
+print(numeros2 [0] [1])
+
+#exemplo 4
+pesos = [
+  [0,0,0],
+  [0,0,0],
+  [0,0,0]
+]
+maior = 0  
+for a in range (3):
+  for b in range (3):
+    pesos[a] [b] = float(input("Digite um numero:"))
+    if pesos [a] [b] > maior:
+      maior = pesos[a] [b]
+print(maior)
+
+#funçoes: tratam-se de blocos nomeados de codigo, que exercem uma funçao especifica(soma,imprime,calcula)
+
+#exemplo 1 
+def soma (h,g):
+ return h + g 
+
+#exemplo 2
+from funcoes import soma 
+n1 = int(input("numero 1: "))
+n2 = int(input("numero 2: "))
+resultado = soma (n1,n2)
+print(resultado)
+
+#exemplo 3 
+from aoquadrado import quadrado
+number = int(input("Digite o numero: "))
+resultado = quadrado (number)
+print("O seu numero ao quadrado é:\n",resultado)
+
+#exercicio 2 
+from media import mediacal
+nota1 = float(input("digite a primeira nota:\n "))
+nota2 = float(input("digite a segunda nota:\n "))
+nota3 = float(input("digite a terceira nota:\n "))
+mediafinal = mediacal (nota1,nota2,nota3)
+if mediafinal>=7 :
+  print("Aprovado!,sua media final é:\n",mediafinal)
+if mediafinal<7:
+  print("Reprovado,sua media final é:\n",mediafinal)
+  
