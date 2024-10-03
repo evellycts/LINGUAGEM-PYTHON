@@ -1,0 +1,214 @@
+#manipulaçao de strings 
+#strings sao consideradas objetos 
+#objeto em programaçao é uma instacia de uma classe 
+
+#exemplo 1 - startswith
+
+nome = input("Digite seu nome:\n")
+if nome.startswith("Evellyn"):
+  print("O nome começa com Evellyn")
+elif nome.startswith("Cat"):
+  print("O nome começa com Cat")
+else:
+  print("inválido")
+  
+#exemplo 2 - endswith
+
+nome = input("Digite seu nome:\n")
+if nome.endswith("Evellyn"):
+  print("O nome começa com Evellyn")
+elif nome.endswith("Cat"):
+  print("O nome começa com Cat")
+else:
+  print("inválido")
+  
+#exemplo 3 - lower (caixa baixa)
+
+nome = "EVELLYN CAT"
+print(nome)
+nome_minusculo = nome.lower()
+print(nome_minusculo)
+
+#exemplo 4 - upper (caixa alta)
+
+nome = "evellyn cat"
+print(nome)
+nome_maiusculo = nome.upper()
+print(nome_maiusculo)
+
+#exemplo 5 - if in ( verificar se uma palavra consta em uma string)
+
+nome = "evellyn cat santos"
+if "cat" in nome:
+  print("existe o sobrenome cat no nome em questão")
+else:
+  print("não existe o sobrenome cat no nome em questão")
+  
+# exemplo 6 - not in ( verificar se uma palavra nao consta em uma string)
+
+nome = "evellyn cat santos"
+if "silva" not in nome:
+  print("não existe o sobrenome silva no nome em questão")
+else:
+  print("existe o sobrenome silva no nome em questão")
+  
+#exercicio 1 
+
+nome = input("Digite o nome:\n")
+nome_caixabaixa = nome.lower()
+print(nome,nome_caixabaixa)
+
+#exemplo 7 - count(contagem)
+
+frase = "Assim pensando o tempo passa e a gente vai ficando pra trás. Esperando, esperando,esperando. Esperando o sol. Esperando o trem. Esperando o aumento. Desde o ano passado para o mês que vem. (Chico Buarque)"
+conta_palavra = frase.count("Esperando")
+print("Quantidade de esperando:",conta_palavra)
+conta_sinal = frase.count(".")
+print("Quantidade de pontos:",conta_sinal)
+
+#exemplo 8 -  len (quantidade de caracteres de uma string)
+
+palavra = "Otorrinolaringologista"
+conta_letras = len(palavra)
+print("Quantidade de letras:",conta_letras)
+
+#exercicio 1 /parte 2 
+
+nome = input("Digite o nome:\n")
+nome_caixabaixa = nome.lower()
+print(nome,"\n",nome_caixabaixa)
+conta_letras = len(nome)
+print("A quantidade de letras do seu nome é:\n",conta_letras)
+
+#exemplo 9 - find (saber se uma string esta dentro de outra e obter o índice do pimeiro caractere)
+
+frase = "café com leite"
+posicao = frase.find("leite")
+if posicao != -1:
+  print(posicao)
+else:
+  print("Palavra não localizada")
+
+#exercicio 1 /parte 3 
+
+nome = input("Digite o nome:\n")
+nome_caixabaixa = nome.lower()
+print(nome_caixabaixa)
+conta_letras = len(nome)
+print("A quantidade de letras do seu nome é:\n",conta_letras)
+posicao = nome.find(" ")
+print("\n",posicao)
+
+#exemplo 10 - center (centralizar strings)
+
+palavra = "PYTHON"
+print("|||",palavra.center(40),"|||")
+frase = "Changing the way you code"
+print("|||",frase.center(40),"|||")
+
+#exemplo 11 - ljust/rjust (preencher strings com espaços)
+
+palavra = "PYTHON"
+frase = "Changing the way you code"
+print(palavra.ljust(10),frase)
+print(palavra,frase.rjust(30))
+
+#exercicio 1 / parte 4 
+
+nome = input("Digite o nome:\n")
+nome_caixabaixa = nome.lower()
+print(nome_caixabaixa)
+conta_letras = len(nome)
+print("A quantidade de letras do seu nome é:\n",conta_letras)
+posicao = nome.find(" ")
+print(posicao)
+nome_caixalta = nome.upper()
+print("|||",nome_caixalta.center(40,"*"),"|||")
+
+#exemplo 12 - replace (substituir um conjunto de caracteres de uma string por outra)
+
+frase = "Chá combina com tudo"
+correto = frase.replace("Chá","Café")
+print(correto)
+
+#exercicio 1 / parte 5 
+
+nome = input("Digite o nome:\n")
+nome_caixabaixa = nome.lower()
+print(nome_caixabaixa)
+conta_letras = len(nome)
+print("A quantidade de letras do seu nome é:\n",conta_letras)
+posicao = nome.find(" ")
+print(posicao)
+nome_caixalta = nome.upper()
+print("|||",nome_caixalta.center(40,"*"),"|||")
+mudanca = nome_caixalta.replace(" ","#")
+print(mudanca)
+
+#exemplo 13 - isdigit/isalpha/isalnum (verificar o tipo de digito)
+
+dado = "www123"
+if dado.isdigit():
+  print("Existem apenas números")
+elif dado.isalpha():
+  print("Existe apenas letras")
+elif dado.isalnum():
+  print("Existe letras ou números")
+
+#exercicio 1 / parte 6
+
+nome = input("Digite o nome:\n")
+nome_caixabaixa = nome.lower()
+print(nome_caixabaixa)
+conta_letras = len(nome)
+print("A quantidade de letras do seu nome é:\n",conta_letras)
+posicao = nome.find(" ")
+print(posicao)
+nome_caixalta = nome.upper()
+print("|||",nome_caixalta.center(40,"*"),"|||")
+mudanca = nome_caixalta.replace(" ","#")
+print(mudanca)
+senha = input("Digite sua senha:\n")
+if senha.isdigit():
+  print("Sua senha possui apenas números")
+elif senha.isalpha():
+  print("Sua senha possui somente letras")
+elif senha.isalnum():
+  print("Sua senha possui letras e números")
+
+#exemplo 14 - % (definir a quantidade de casas decimais após o ponto de um float)
+
+numero = 43.13985765
+print ("valor = %.2f" % numero)
+print ("valor = %.3f" % numero)
+print ("valor = %.4f" % numero)
+
+#exemplo 15 - slincing
+
+texto = "Olá, Mundo!"
+   recortar a palavra "Mundo"
+recorte = texto [5:10]
+print(recorte)#saída:"Mundo"
+
+#exercicio 1 / parte 7
+
+nome = input("Digite o nome:\n")
+nome_caixabaixa = nome.lower()
+print(nome_caixabaixa)
+conta_letras = len(nome)
+print("A quantidade de letras do seu nome é:\n",conta_letras)
+posicao = nome.find(" ")
+print(posicao)
+nome_caixalta = nome.upper()
+print("|||",nome_caixalta.center(40,"*"),"|||")
+mudanca = nome_caixalta.replace(" ","#")
+print(mudanca)
+senha = input("Digite sua senha:\n")
+if senha.isdigit():
+  print("Sua senha possui apenas números")
+elif senha.isalpha():
+  print("Sua senha possui somente letras")
+elif senha.isalnum():
+  print("Sua senha possui letras e números")
+recorte = nome_caixalta[0:nome_caixalta.find(" ")]
+print(recorte)
