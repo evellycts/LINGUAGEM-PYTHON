@@ -1,0 +1,104 @@
+#criar e adicionar dados no arquivo
+arquivo = open('dados.txt','w')
+nome = 'Evellyn Santos'
+arquivo.write(nome)
+arquivo.close()
+#####
+arquivo = open('dados.txt','a')
+nome = '\nEvellyn Santos'
+arquivo.write(nome)
+arquivo.close()
+
+# read()- retorna todo o conteúdo
+arquivo = open('dados.txt','r')
+dados = arquivo.read()
+print(dados)
+arquivo.close()
+
+# readline()- retorna uma linha do arquivo por vez
+arquivo = open('dados.txt','r')
+linha1=arquivo.readline()
+linha2=arquivo.readline()
+print(linha1)
+print(linha2)
+arquivo.close()
+
+# readlines() - retorna uma lista, onde cada elemento é uma linha do arquivo
+arquivo = open('dados.txt','r')
+linhas = arquivo.readlines()
+for linha in linhas:
+  print(linha)
+arquivo.close()
+
+#exercicio 1 - minha resposta 
+arquivo = open("nome.txt","w")
+name1 = input("Olá, digite seu nome:\n")
+name2 = input("Olá, digite seu nome:\n")
+name3 = input("Olá, digite seu nome:\n")
+arquivo.write(name1)
+arquivo.write(name2)
+arquivo.write(name3)
+arquivo.close()
+print("\n",name1,"\n",name2,"\n",name3)
+
+#resposta -  exercicio 1 
+arquivo = open('dados.txt','a')
+for n in range (3):
+  name = input('Digite um nome:')
+  name += "\n"
+  arquivo.write(name)
+arquivo = open('dados.txt','r')
+linhas = arquivo.read()
+print(linhas)
+arquivo.close()
+
+#exercicio 2 - minha resposta 
+arquivo = open("nome.txt","a")
+name1 = input("Olá, digite seu nome:\n")
+name2 = input("Olá, digite seu nome:\n")
+name3 = input("Olá, digite seu nome:\n")
+arquivo.write(name1)
+arquivo.write(name2)
+arquivo.write(name3)
+arquivo.close()
+print("\n",name2)
+
+#resposta - exercicio 2 
+arquivo = open('dados.txt','a')
+for n in range (3):
+  name = input('Digite um nome:')
+  name += "\n"
+  arquivo.write(name)
+arquivo = open('dados.txt','r')
+linhas = arquivo.readlines()
+print(linhas[1])
+arquivo.close()
+
+#exercicio 3 - minha resposta 
+
+
+#resposta - exercicio 3 
+for n in range (3):
+  name = input('Digite um nome:')
+  name += "\n"
+  fone = input('Digite seu telefone:')
+  fone += "\n"
+  nomearquivo = input('Digite o nome do arquivo:')
+  nomearquivo += '.txt'
+  arquivo = open(nomearquivo,'w')
+  arquivo.write(name)
+  arquivo.write(fone)
+  arquivo.close()
+
+#exercicio 7 - minha resposta 
+  
+#resposta - exercicio 7
+arquivo1 = open('dados.txt','r')
+texto1 = arquivo1.read()
+arquivo2 = open('nome.txt','r')
+texto2 = arquivo2.read()
+
+arquivo3 = open('alunos.txt','w')
+arquivo3.write(texto1)
+arquivo3.write(texto2)
+arquivo3.close()
